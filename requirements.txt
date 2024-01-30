@@ -1,0 +1,5 @@
+aiohttp==3.9.3
+aiosmtplib==3.0.1
+loguru==0.7.2
+mplfinance==0.12.10b0
+pandas==2.2.0
