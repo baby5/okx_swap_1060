@@ -176,13 +176,13 @@ async def judge(df, inst_id):
             await email(inst_id, act, k_img)
 
     else:
-        logger.info(f"Nothing happened {inst_id}, to sleep...")
+        logger.debug(f"Nothing happened {inst_id}, to sleep...")
 
     await asyncio.sleep(SLEEP_TIME)
 
 
 async def monitor(inst_id, session):
-    logger.info(f"Start monitor {inst_id}")
+    logger.debug(f"Start monitor {inst_id}")
 
     df = await get_candle_df(inst_id, 300, session)
     await judge(df, inst_id)
